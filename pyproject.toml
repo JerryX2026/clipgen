@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clipgen"
+version = "0.1.0"
+description = "Short video auto generator — AI配音+字幕+画面一键生成短视频"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "Pillow>=10.0",
+    "edge-tts>=6.0",
+    "imageio-ffmpeg>=0.5",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+clipgen = "clipgen.cli:main"

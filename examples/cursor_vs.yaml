@@ -1,0 +1,115 @@
+# clipgen example: Claude Code vs Cursor
+# Usage: clipgen build cursor_vs.yaml
+output: "cursor_vs_demo.mp4"
+voice: "zh-CN-XiaoxiaoNeural"
+rate: "+30%"
+
+scenes:
+  - script: "Cursor 和 Claude Code，都是 AI 编程的明星产品。但它们是两个完全不同的物种。"
+    template: comparison
+    data:
+      left:
+        name: "Cursor"
+        subtitle: "AI 编辑器"
+        color: "#8b5cf6"
+      right:
+        name: "Claude"
+        subtitle: "Code"
+        color: "#00d2ff"
+      caption: "两个完全不同的物种"
+      tags:
+        - "⌨️ AI 编辑器"
+        - "🤖 AI 代理"
+        - "🤔 哪个更强"
+
+  - script: "Cursor 是 AI 原生的编辑器。你按 Cmd+K 打字描述需求，它直接在你的代码里生成。像一个会猜你心思的结对编程伙伴。"
+    template: terminal
+    data:
+      title: "Cursor — AI 编辑器"
+      accent: "#8b5cf6"
+      lines:
+        - text: "# app.py — fibonacci with memo"
+          color: dim
+        - text: "def fibonacci(n):"
+          color: white
+        - text: "    if n <= 1:"
+          color: white
+        - text: "        return n"
+          color: white
+        - text: "    return fibonacci(n-1) + ..."
+          color: dim
+        - text: ""
+          color: dim
+        - text: "# ⌘K: add memo cache"
+          color: cyan
+        - text: "  → Generating implementation..."
+          color: green
+      note: "直接生成代码，所见即所得"
+
+  - script: "Claude Code 是终端里的 AI 代理。你说帮我搭个博客，它分析整个项目、生成十几个文件。像一个能独立干活的远程工程师。"
+    template: terminal
+    data:
+      title: "Claude Code — AI 代理"
+      accent: "#00d2ff"
+      lines:
+        - text: "$ 帮我搭一个博客系统"
+          color: green
+        - text: ""
+          color: dim
+        - text: "  Analyzing project..."
+          color: dim
+        - text: "  Installing dependencies..."
+          color: dim
+        - text: "  Generating blog app:"
+          color: cyan
+        - text: "  ✓ models/post.py  created"
+          color: green
+        - text: "  ✓ routes/blog.py  created"
+          color: green
+        - text: "  ✓ templates/      created"
+          color: green
+        - text: "  ✓ migrations/     created"
+          color: green
+        - text: ""
+          color: dim
+        - text: "  Done! 15 files generated."
+          color: white
+      note: "搭架构生成全套方案，不止是代码"
+
+  - script: "Cursor 帮你写代码。Claude Code 帮你做项目。一个是编辑器，一个是代理。本质逻辑完全不同。"
+    template: code_diff
+    data:
+      title: "本质逻辑完全不同"
+      accent: "#00d2ff"
+      before:
+        label: "Cursor"
+        lines:
+          - text: "AI 原生编辑器"
+          - text: "Cmd+K 行内生成"
+          - text: "你写代码它辅助"
+          - text: "帮你写更快"
+      after:
+        label: "Claude Code"
+        lines:
+          - text: "终端 AI 代理"
+          - text: "对话式完整方案"
+          - text: "AI 独立干活"
+          - text: "帮你做项目"
+      note: "一个是编辑器，一个是代理，你会选哪个？"
+
+  - script: "你更需要哪个？评论区写下你的选择，我看看 Cursor 多还是 Claude Code 多。"
+    template: question
+    data:
+      question: "你选哪个？"
+      option_a: "Cursor"
+      option_b: "Claude Code"
+      a_color: "#8b5cf6"
+      b_color: "#00d2ff"
+      comment_prompt: "💬 评论区写 A 或 B，我看看哪边人多"
+
+  - script: "关注我，每天一个 AI 编程效率技巧。"
+    template: cta
+    data:
+      text: "关注我"
+      subtitle: "每天一个 AI 编程效率技巧"
+      button_text: "下期更精彩 →"
