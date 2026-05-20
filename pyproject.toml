@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "clipgen"
-version = "0.1.1"
+version = "0.2.0"
 description = "Short video auto generator — AI配音+字幕+画面一键生成短视频"
 readme = "README.md"
 requires-python = ">=3.10"
