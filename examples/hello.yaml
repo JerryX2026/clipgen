@@ -1,0 +1,43 @@
+# clipgen 极简示例
+# 3 个场景，25 秒短视频
+output: "hello_clipgen.mp4"
+voice: "zh-CN-XiaoxiaoNeural"
+rate: "+30%"
+
+scenes:
+  - script: "这是一个用 clipgen 自动生成的短视频，三行配置搞定。"
+    template: title
+    data:
+      title: "Hello clipgen"
+      subtitle: "三行配置，一键出片"
+      accent: "#00d2ff"
+      tags: ["🚀 极简配置", "🎨 自动画面", "🎙️ AI 配音"]
+
+  - script: "内置多套模板，标题卡、终端演示、代码对比、投票互动，覆盖常见短视频场景。"
+    template: terminal
+    data:
+      title: "内置模板"
+      accent: "#00d2ff"
+      lines:
+        - text: "$ clipgen templates"
+          color: green
+        - text: "  title        标题卡"
+          color: white
+        - text: "  comparison   分屏对比"
+          color: white
+        - text: "  terminal     终端演示"
+          color: white
+        - text: "  code_diff    代码对比"
+          color: white
+        - text: "  question     投票互动"
+          color: white
+        - text: "  cta          关注引导"
+          color: white
+      note: "一行命令查看所有模板"
+
+  - script: "关注我，每天一个 AI 编程效率技巧。这个工具已经开源在 GitHub，链接在主页。"
+    template: cta
+    data:
+      text: "Star 支持"
+      subtitle: "clipgen — 开源免费，一行命令生成短视频"
+      button_text: "GitHub 见 →"
